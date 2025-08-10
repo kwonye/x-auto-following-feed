@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "X Auto Following Feed",
+  "version": "1.0.0",
+  "description": "Automatically switch to the Following feed on X (formerly Twitter).",
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*", "https://twitter.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "host_permissions": ["https://x.com/*", "https://twitter.com/*"],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "x-following-tab@example.com"
+    }
+  }
+}
